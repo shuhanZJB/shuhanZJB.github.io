@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>舒航的书屋</title>
+		<link rel="icon" type="image/gif" href="orbook2.png"/>
+		<meta name="author" content="zhujunbo">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<style type="text/css">
+			@media only screen and (orientation: landscape) {
+			  body {
+			    background-color: #add8e669;
+			  }
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="box">
+				<div class="back">
+					<span class="tit">舒航的书屋</span>
+				</div>
+				<div class="back">
+					<span class="tit">向上吧!少年</span>
+				</div>
+				<div class="back">
+					<span class="tit">干饭吧!少年</span>
+				</div>
+				<div class="back">
+					<span class="tit">学习吧!少年</span>
+				</div>
+			</div>
+		</header>
+		<div id="con" >
+			<h1 class="head-tit">愿此刻,风不会打扰您的孤独！</h1>
+			<ul class="contents">
+				<li>
+					<h1 class="contit">散文</h1>
+					<ul>
+						<li><a href="html/platform.html">月台</a></li>
+						<li><a href="html/Shadow.html">背影</a></li>
+						<li><a href="html/hurriedly.html">匆匆</a></li>
+						<li><a href="html/Pondoflotus.html">荷塘月色</a></li>
+					</ul>
+				</li>
+				<li>
+					<h1 class="contit">词赋</h1>
+					<ul>
+						<li><a href="html/luoshenfu.html">洛神赋</a></li>
+						<li><a href="html/lisao.html">离骚</a></li>
+						<li><a href="html/shangui.html">山鬼</a></li>
+						<li><a href="html/fqh.html">凤求凰</a></li>
+						<li><a href="html/shangye.html">铙歌十八曲</a></li>
+						<li><a href="html/changhg.html">长恨歌</a></li>
+						<li><a href="html/yqiuc.html">雁丘词</a></li>
+					</ul>
+				</li>
+				<li>
+					<h1 class="contit">随笔</h1>
+					<ul>
+						<li><a href="">风</a></li>
+						<li><a href="">月</a></li>
+						<li><a href="">雪</a></li>
+					</ul>
+				</li>
+				<li>
+					<h1 class="contit">典藏</h1>
+					<ul>
+						<li><a href="html/dizigui.html">弟子规</a></li>
+						<li><a href="html/sanzj.html">三字经</a></li>
+						<li><a href="">千字文</a></li>
+					</ul>
+				</li>
+				<li>
+					<h1 class="contit">现代诗</h1>
+					<ul>
+						<li><a href="">雨巷</a></li>
+						<li><a href="">错误</a></li>
+						<li><a href="">我不知道风</a></li>
+					</ul>
+				</li>
+				<li>
+					<h1 class="contit">文案</h1>
+					<ul>
+						<li><a href="html/love.html">等雪白头</a></li>
+						<li><a href="">时光易老</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="time">
+			<p class="time-t"></p>
+			<p class="time-m"></p>
+			<script type="text/javascript">
+				function gettime(){
+					var T = document.getElementsByClassName("time-t")[0];
+					var M = document.getElementsByClassName("time-m")[0];
+					var now = new Date();
+					var week = ['星期一','星期二','星期三','星期四','星期五','星期六','星期天']
+					var str1 = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+					var str2 = now.getFullYear()+"/"+(now.getMonth()+1)+"/"+now.getDate()+" "+week[now.getDay()];
+					T.innerHTML = str1;
+					M.innerHTML = str2;
+				}
+				window.onload= setInterval(gettime,1000);
+			</script>
+		</div>
+		<footer>联系舒航:<a href="mailto:1664578649@qq.com">1664578649@qq.com </a> <a href="html/shop.html">关于舒航</a></footer>
+	</body>
+</html>
