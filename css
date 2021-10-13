@@ -1,0 +1,186 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 5px;   
+}
+::-webkit-scrollbar-thumb {
+    background-color:dimgrey;
+}
+::selection{
+	color: tomato;
+}
+header{
+	width: 100%;
+	height: 10vh;
+	position: fixed;
+	align-items: center;
+	background-color: rgba(255,255,255,0.7);
+	backdrop-filter: blur(10px);
+	display: flex;
+	border-bottom: 1px #80808021 solid;
+}
+main{
+	display: flex;
+	align-items: center;
+	flex-direction:column;
+	background-size: cover;
+}
+article{
+	padding: 50px 0 30px;
+}
+footer{
+	height: 5vh;
+	background-color: #190606c7;
+	/* filter:blur(1px); */
+	color: white;
+	font-size: .5em;
+	line-height: 5vh;
+	text-align: center;
+}
+img{
+	width: 100%;
+	height:100%;
+}
+a{
+	color: #000000ba;
+	text-decoration: none;
+	margin-left: 10%;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+ol{
+	list-style-position: inside;
+}
+.head{
+	width: 100%;
+	height: 450px;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content:center;
+	font-family: cursive;
+	color: white;
+	font-size: 55px;
+	background-image: url(../img/1.webp);
+}
+.head>h6{
+	margin-top: 20px;
+	font-size: .4em;
+	font-weight: 100;
+	/* font-family: song; */
+}
+.card{
+	width: 50vw;
+	height: 20vh;
+	background-color:#726f68;
+	margin: auto;
+	border-radius: 20px;
+	box-shadow: rgb(0 0 0 / 50%) 0 0.625rem 1.125rem;
+	transition: .5s;
+	line-height: 20vh;
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+}
+.card:hover{
+	transform: scale(1.1);
+}
+section{
+	width: 60vw;
+	margin: 10px;
+	line-height: 2;
+}
+section>h1{
+	margin-top: 30px;
+	text-align: center;
+	color: teal;
+}
+h3{
+	text-align: center;
+}
+.law-title{
+	border-left: 4px gold solid;
+	padding-left: 20px;
+	margin-bottom: 20px;
+	text-align: justify;
+	/* font-weight: 600; */
+}
+.btn{
+	margin: 10px;
+	padding: 5px 10px;
+	display: inline-block;
+	border:#4a4113 1px solid ;
+	border-radius: 20px;
+	font-size: 13px;
+	font-weight: 100;
+	color:#4a4113 ; 
+} 
+.btn:hover{ 
+	background-color: #4a4113 ; 
+	color: white;
+} 
+.piece{
+	width: 100%;
+	height: auto;
+	padding: 20px ;
+	/* padding-left: 20px; */
+	background-color: #00808038;
+	border-left: #008080 4px solid;
+	color: dimgrey;
+	font-size: 15px;
+	box-shadow: #51888080 0 0.625rem 1.125rem;
+}
+.hline{
+	color: #172b67;
+}
+h6.write{
+	margin-top: 0;
+	text-align: center;
+	font-size: .3em;
+}
+.law{
+	width: 50vw;
+	margin: auto;
+	color: slategray;
+}
+.law>h1{
+	visibility: hidden;
+	font-size: 50px;
+	color: slategray;
+}
+.law>h2{
+	border-left: gray 5px solid;
+	padding-left: 30px;
+	font-size: 25px;
+	color: teal;
+	background-color: #30706e1f;
+	margin: 30px 0 20px;
+}
+.item{
+	font-weight: bold;
+	font-size: 16px;
+	color: steelblue;
+	/* font-family: '隶书'; */
+}
+footer>a{
+	margin:0 0 5px;
+	color: wheat;
+	font-weight: 100;
+}
+footer>a:hover{
+	color: #FFA500;
+}
+@media screen and (max-width:720px) {
+	.card{
+		width: 80vw;
+	}
+	section{
+		width: 90vw;
+	}
+	.head>span{
+	font-size: 35px;
+	}
+}
