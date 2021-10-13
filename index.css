@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+::selection{
+	background-color: lightblue;
+}
+header{
+	height: 200px;
+	background-color: #000033;
+	overflow: hidden;
+}
+.box{
+	width: 400%;
+	height: 100%;
+	/* animation: gun 30s ; */
+	/* animation-fill-mode:backwards; */
+}
+.back{
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	padding: 60px;
+	/* background-color: palegoldenrod; */
+}
+.tit{
+	color: white;
+	font-size: 55px;
+	/* margin: 60px 0; */
+	/* display: inline-block; */
+}
+ul{
+	list-style-type: none;
+}
+ul.contents>li{
+	width: 50%;
+	height: auto;
+	/* padding:25px 60px; */
+	position: relative;
+	/* background-color: lightyellow; */
+}
+ul.contents>li::after{
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-color: lightblue;
+	position: absolute;
+	border-radius: 50%;
+}
+ul.contents>li:nth-child(odd){
+	margin-left: 50%;
+	border-left:lightblue 3px solid ;
+	padding:0px 0px 60px 35px ;
+}
+ul.contents>li:nth-child(odd)::after{
+	top: -10px;
+	left: -11px;
+}
+ul.contents>li:nth-child(even){
+	margin-right: 50%;
+	border-right:lightblue 3px solid ;
+	transform: translateX(3px);
+	padding:0px 35px 60px 0px ;
+	text-align: right;
+}
+ul.contents>li:nth-child(even)::after{
+	top: -10px;
+	right: -12px;
+}
+@keyframes gun{
+	0%{
+		transform: translateX(0%);
+	}
+	33%{
+		transform: translateX(-25%);
+	}
+	66%{
+		transform: translateX(-50%);
+	}
+	100%{
+		transform: translateX(-70%);
+	}
+}
+#con{
+	background-image: url(https://bkssl.bdimg.com/static/wiki-campus/home/imgs/activity-bg_d47dccd.png);
+	background-size: contain;
+	margin-bottom: 40px;
+}
+.head-tit{
+	text-align: center;
+	font-size: 45px;
+	margin: 60px 0;
+	color: tan;
+	/* transform: translateX(20px); */
+}
+.contit{
+	margin: 0 0 30px;
+	font-size: 40px;
+}
+a{
+	text-decoration: none;
+	color: teal;
+	font-size: 18px;
+	line-height: 40px;
+	padding: 0 10px;
+}
+a:hover{
+	color: cornflowerblue;
+}
+.time{
+	position: sticky;
+	bottom: 10px;
+	right: 10px;
+	padding-right: 15px;
+	text-align: right;
+}
+.time-t{
+	font-size: 2em;
+	font-weight: bolder;
+	color: #333333ba;
+}
+.time-m{
+	color: dimgray;
+}
+footer{
+	padding: 2px 0;
+	text-align: center;
+	background-color:#06162ccf;
+	color: white;
+	line-height: 40px;
+	font-size: 12px;
+}
+footer a{
+	color: white;
+	font-size: 13px;
+}
+footer a:hover{
+	color: #ff4;
+}
+@media screen and (max-width: 720px){
+	.head-tit{
+		font-size: 30px;
+	}
+	.time{
+		right: 30px;
+	}
+	.time-t{
+		font-size: 1.5em;
+	}
+	.time-m{
+		font-size: .6em;
+	}
+}
