@@ -1,0 +1,75 @@
+body{
+	background-color: rgba(42, 239, 52, 0.2);
+	cursor: url(../img/fire2.ico),url(../img/3w.ico),default;
+}
+.contarin{
+	max-width: 880px;
+	height: auto;
+	/* border: rgba(42, 245, 52, 0.1) 1px solid; */
+	margin: 50px auto;
+	/* background-color: lightcoral; */
+}
+h1{
+	height: 500px;
+	writing-mode: tb;
+	display: inline-block;
+	font-size: 80px;
+	margin-top: 100px;
+	opacity: .8;
+	/* text-align: justify; */
+	transition: .6s;
+}
+h1:nth-child(1){
+	text-shadow: 0 0 120px green;
+}
+h1:nth-child(2){
+	text-shadow: 0 0 80px red;
+}
+h1:nth-child(3){
+	text-shadow: 0 0 120px blue;
+}
+h1:nth-child(4){
+	text-shadow: 0 0 120px purple;
+}
+h1:nth-child(5){
+	text-shadow: 0 0 120px gold;
+}
+h1:hover{
+	transform: /* translateY(-30px) */ scale(1.1);
+	opacity: 1;
+}
+.san{
+	letter-spacing: 41px;
+}
+.er{
+	letter-spacing: 159px;
+}
+a{
+	color: #1B3062;
+	text-decoration: none;
+}
+.prev,.next{
+	position: fixed;
+	color: slateblue;
+}
+.prev:hover,.next:hover{
+	color: #006400;
+	font-weight: bold;
+}
+.prev{
+	bottom: 50px;
+	left: 100px;
+}
+.next{
+	bottom: 50px;
+	right: 100px;
+}
+::selection{
+	color:teal;
+}
+::-webkit-scrollbar {
+    width: 5px;   
+}
+::-webkit-scrollbar-thumb {
+    background: lightgreen;
+}

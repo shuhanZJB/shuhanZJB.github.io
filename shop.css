@@ -1,0 +1,246 @@
+* {
+	box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 5px;     
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+}
+::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
+    background: #EDEDED;
+}
+::selection{
+	color: forestgreen;
+}
+body {
+	font-family: Arial;
+	margin: 0;
+}
+#barnner{
+	display: none;
+	background:lightgoldenrodyellow;
+	padding:5px
+}
+.saohua{
+	font-size: 20px;
+	font-family: "隶书";
+}
+.saohua:hover{
+	color: teal;
+}
+.footer {
+	padding: 60px;
+	text-align: center;
+	background: black;
+	background-image:url(https://s3.bmp.ovh/imgs/2021/09/3760b5e2cc46f556.png) ;
+	color: white;
+	z-index: 0;
+	position: relative;
+}
+.mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(https://s3.bmp.ovh/imgs/2021/09/68c03ba1cf80ca8b.png);
+	animation: mask 10s linear infinite;
+	z-index: -1;
+}
+@keyframes mask{
+	from{background-position-x:2px;}
+	to{background-position-x:800px;}
+}
+.navbar {
+	position: sticky;
+	top: 0;
+	display: flex;
+	background-color: #333;
+}
+.navbar a {
+	color: white;
+	padding: 14px 20px;
+	text-decoration: none;
+	text-align: center;
+	/* transition:.5s; */
+}
+.navbar a:hover:not(.active) {
+	/* background-color: #ddd; */
+	color: wheat;
+	/* font-weight: bold; */
+}
+a.active{
+	font-weight: bold;
+	color: #FFA07A;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.side {
+	flex: 30%;
+	background-color: #f1f1f1;
+	padding: 20px;
+}
+.main {
+	flex: 70%;
+	background-color: white;
+	padding: 20px;
+}
+.fakeimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+	height: auto;
+}
+. header {
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+}
+.left{
+	float: left;
+	width: 40%;
+	height: 100%;
+	/* background-color: lightblue; */
+}
+.left>img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.right{
+	float: right;
+	width: 60%;
+	height: 100%;
+	/* background-color: lemonchiffon; */
+}
+.right>p{
+	margin-left: 10%;
+	padding-left: 5%;
+	border-left: 2px solid white;
+	font-family: fangsong;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+.canshu{
+	display: flex;
+	/* justify-content:space-between; */
+	background-color: transparent;
+	padding: 20px 0;
+}
+.canshu>img{
+	width: 50px;
+	height: 80px;
+	object-fit: cover;
+}
+.canshu>p{
+	/* flex: ; */
+	flex-grow:3;
+	align-self:center;
+	text-align: center;
+	/* margin-left: 30px; */
+}
+.canshu>p:hover{
+	color: tomato;
+	font-weight: bold;
+}
+.cso_btn{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #808080;
+	border-radius:50% ;
+	border: 0;
+	right: 0px;
+	outline: none;
+	color: white;
+}
+h5>span{
+	float: right;
+}
+/* The Modal (background) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 60px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+	margin: auto;
+	display: block;
+	max-width: 80%;
+	height: 80%;
+}
+/* Caption of Modal Image */
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 100px;
+}
+/* Add Animation */
+.modal-content,
+#caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+@keyframes zoom {
+	from {
+		transform: scale(0.1)
+	}
+	to {
+		transform: scale(1)
+	}
+}
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+	text-align: center;
+}
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+	.modal-content {
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.row{
+		flex-direction: column;
+	}
+	.navbar {
+		justify-content: space-evenly;
+	}
+	#foot{
+		display: none;
+	}
+	.left>img{
+		object-fit: contain;
+	}
+}
