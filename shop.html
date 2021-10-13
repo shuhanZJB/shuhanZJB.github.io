@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>舒航的小店</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/gif" href="../img/litteleaf.png"/>
+		<link rel="stylesheet" type="text/css" href="../css/shop.css"/>
+		<script type="text/javascript">
+			window.onload=setInterval(function(){
+				var newtime = new Date();
+				var date = newtime.toLocaleDateString();
+				var time = newtime.toLocaleTimeString();
+				var container = document.getElementById('time');
+				container.innerHTML= '现在时间为：'+' '+date+time;
+			},1000)
+		</script>
+	</head>
+	<body>
+
+		<!-- 广告 -->
+		<div id="barnner">
+			<button type="button" class="cso_btn" onclick="colsegg(this.parentElement.id)">&times;</button>
+			<h4 style="text-align:center" id="time"></h4>
+		</div>
+
+		<!-- Header -->
+		<!-- <div class="footer">
+			<h1>我的小店</h1>
+		</div> -->
+
+		<!-- 导航栏 -->
+		<div class="navbar">
+			<a href="../index.html">首页</a>
+			<a href="shelf.html">舒航的书架</a>
+			<a href="#">舒航的日记</a>
+			<a href="#" class="active">舒航的小店</a>
+		</div>
+		<!-- 弹性网格（内容） -->
+		<div class="row">
+			<div class="side">
+				<h2>关于店主</h2>
+				<h5>舒航的照片：</h5>
+				<div class="fakeimg" style="height:200px;">
+					<div class="left">
+						<img id="img1" src="https://img2.baidu.com/it/u=4291457613,4122193391&fm=26&fmt=auto" alt="金彗星" onclick="pic(this.id)"/>
+					</div>
+					<div class="right">
+						<p>姓名：朱允炆</p>
+						<p>职业：解语师</p>
+						<p>爱好：看书</p>
+						<p>年龄：二十一</p>
+						<p>国籍：中国</p>
+					</div>
+				</div>
+				<p class="saohua">若要看脸论颜色，当是人中第一流</p>
+				<h3>关于本店</h3>
+				<p>舒航的藏书.</p>
+				<div class="fakeimg canshu">
+					<img id="cndqsjlg" src="../img/textbook.png" alt="《从你的全世界路过》" onclick="pic(this.id)"/>
+					<p>《从你的全世界路过》</p>
+				</div>
+				<div class="fakeimg canshu">
+					<img id="ybygxmb" src="https://easyreadfs.nosdn.127.net/gpZVohxOJ0sjkXOYQuFhJg==/8796093024899601488"
+					 alt="《云边有个小卖部》" onclick="pic(this.id)"/>
+					<p>《云边有个小卖部》</p>
+				</div>
+				<div class="fakeimg canshu">
+					<img id="xlxdsy" src="https://easyreadfs.nosdn.127.net/IY2-rHFMfwx06B8tfVl3fw==/8796093024648200041"
+					 alt="《雪落下的声音》" onclick="pic(this.id)">
+					<p>《雪落下的声音》</p>
+				</div>
+			</div>
+			<div class="main">
+				<h2>废话文学系列</h2>
+				<h5>系列描述：本系列核心思想为“脱裤子放屁——多此一举”，经典语录有：“我上次这么无语，还是在上次”；
+				“你渴了千万别喝水，不然你就会发现，你不渴了”；定位人群为吃饱了撑的人
+				<span>2021 年 1 月 1 日</span></h5>
+				<div class="fakeimg" style="height:200px;">图像</div>
+				<p>一些文本..</p>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+					exercitation ullamco.</p>
+				<br>
+				<h2>市井文学系列</h2>
+				<h5>系列描述，巴拉巴拉.........<span>2021 年 1 月 2 日</span></h5>
+				<div class="fakeimg" style="height:200px;">图像</div>
+				<p>一些文本..</p>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+					exercitation ullamco.</p>
+			</div>
+		</div>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<span class="close">×</span>
+			<img class="modal-content" id="M-img">
+			<div id="caption"></div>
+		</div>
+		<!-- Footer -->
+		<div class="footer" id="foot">
+			<div class="mask"></div>
+			<h2>页脚</h2>
+		</div>
+		<script type="text/javascript">
+			function pic(x) {
+				var modal = document.getElementById('myModal');
+				var e=document.getElementById(x);
+				var modalImg = document.getElementById("M-img");
+				var captionText = document.getElementById("caption");
+				modal.style.display = "block";
+				modalImg.src = e.src;
+				captionText.innerHTML = e.alt;
+				var csbtn = document.getElementsByClassName("close")[0];/*class类并不是唯一的，所以它是一个数组，即使只有一个元素引用了这个类*/
+				csbtn.onclick = function() {
+					modal.style.display = "none";
+				}
+			}
+			function colsegg(e){
+				var x=document.getElementById(e);
+				x.style.display='none';
+				setTimeout(function(){
+					x.style.display='block';
+				},60000)
+			}
+			function show(){
+				setTimeout(function(){
+					var y=document.getElementById('barnner');
+					y.style.display='block';
+				},12000)
+			}
+			show();
+		</script>
+	</body>
+</html>
