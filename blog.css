@@ -152,7 +152,7 @@ h6.write{
 	color: slategray;
 }
 .law>h2{
-	border-left: gray 5px solid;
+	border-left: #009688 5px solid;
 	padding-left: 30px;
 	font-size: 25px;
 	color: teal;
@@ -174,7 +174,7 @@ footer>a:hover{
 	color: #FFA500;
 }
 @media screen and (max-width:720px) {
-	.card{
+	.card,.law{
 		width: 80vw;
 	}
 	section{
