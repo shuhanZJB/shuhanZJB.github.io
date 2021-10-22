@@ -21,6 +21,7 @@ header{
 	backdrop-filter: blur(10px);
 	display: flex;
 	border-bottom: 1px #80808021 solid;
+	/* box-shadow: #9b9797a6 0 0.1rem 2.125rem; */
 }
 main{
 	display: flex;
@@ -65,6 +66,19 @@ ol{
 	color: white;
 	font-size: 55px;
 	background-image: url(1.webp);
+	background-size: cover;
+}
+.headbg1{
+	background-image: url(005.jpg);
+}
+.headbg2{
+	background-image: url(002.jpg);
+}
+.headbg3{
+	background-image: url(003.jpg);
+}
+.headbg4{
+	background-image: url(004.jpg);
 }
 .head>h6{
 	margin-top: 20px;
