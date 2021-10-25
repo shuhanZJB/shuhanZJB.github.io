@@ -90,6 +90,7 @@ ul.contents>li:nth-child(even)::after{
 	background-image: url(https://bkssl.bdimg.com/static/wiki-campus/home/imgs/activity-bg_d47dccd.png);
 	background-size: contain;
 	margin-bottom: 40px;
+	overflow: hidden;
 }
 .head-tit{
 	text-align: center;
