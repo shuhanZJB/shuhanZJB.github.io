@@ -224,12 +224,6 @@ h5>span{
 	cursor: pointer;
 	transform: rotate(180deg);
 }
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
-	.modal-content {
-		max-width: 100%;
-	}
-}
 @media screen and (max-width: 700px) {
 	.row{
 		flex-direction: column;
@@ -242,5 +236,14 @@ h5>span{
 	}
 	.left>img{
 		object-fit: contain;
+	}
+	.modal-content {
+		max-width: 100%;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.navbar a{
+		font-size: 13px;
+		padding:  14px 10px;
 	}
 }
