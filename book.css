@@ -298,3 +298,17 @@ audio:hover{
 		font-size: 17px;
 	}
 }
+@media screen and (max-width:400px) {
+	.title{
+		font-size: 20px;
+	}
+	.breadcrumb{
+		display: none;
+	}
+	.main{
+		padding-bottom: 30px;
+	}
+	.bg2_a{
+		background-color: #87ceeb;
+	}
+}
