@@ -130,6 +130,7 @@ a:hover{
 footer{
 	padding: 2px 0;
 	text-align: center;
+	background-color: #132b4c;
 	background-color:#06162ccf;
 	color: white;
 	line-height: 40px;
@@ -154,5 +155,14 @@ footer a:hover{
 	}
 	.time-m{
 		font-size: .6em;
+	}
+}
+@media screen and (max-width: 400px){
+	.head-tit{
+		font-size: 20px;
+		transform: translateX(10px);
+	}
+	.back{
+		padding: 60px 0;
 	}
 }
