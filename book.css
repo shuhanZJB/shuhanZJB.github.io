@@ -311,4 +311,11 @@ audio:hover{
 	.bg2_a{
 		background-color: #87ceeb;
 	}
+	.fivetit{
+		font-size: 15px;
+	}
+	.longtit{
+		font-size: 10px;
+		width: 200px;
+	}
 }
