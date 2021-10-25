@@ -21,6 +21,7 @@ header{
 	backdrop-filter: blur(10px);
 	display: flex;
 	border-bottom: 1px #80808021 solid;
+	z-index: 1000;
 	/* box-shadow: #9b9797a6 0 0.1rem 2.125rem; */
 }
 main{
@@ -34,6 +35,7 @@ article{
 }
 footer{
 	height: 5vh;
+	background-color: #494444;
 	background-color: #190606c7;
 	/* filter:blur(1px); */
 	color: white;
@@ -46,6 +48,7 @@ img{
 	height:100%;
 }
 a{
+	color: dimgray;
 	color: #000000ba;
 	text-decoration: none;
 	margin-left: 10%;
@@ -136,6 +139,13 @@ h3{
 	background-color: #4a4113 ; 
 	color: white;
 } 
+.btn2{
+	border-color: brown;
+	color:brown;
+}
+.btn2:hover{ 
+	background-color: brown ; 
+} 
 .piece{
 	width: 100%;
 	height: auto;
@@ -146,6 +156,27 @@ h3{
 	color: dimgrey;
 	font-size: 15px;
 	box-shadow: #51888080 0 0.625rem 1.125rem;
+}
+.xf{
+	border-left: #53070e 4px solid ;
+	background-color:#973935;
+	color: gainsboro;
+	font-family: monospace;
+	box-shadow: #b46969 0 0.225rem 1.1rem;
+}
+.preface{
+	background-color:#973935;
+	font-family: cursive;
+	color:#e2c9c5;
+	border-top: #53070e 10px solid ;
+	text-indent: 2em;
+	padding: 20px 15px;
+	box-shadow: 0 4px 8px 0 lightcoral, 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	transition: .7s;
+}
+.preface:hover{
+	transform: translateY(-10px);
+	box-shadow: brown 0 0.625rem 1.125rem;
 }
 .hline{
 	color: #172b67;
@@ -204,5 +235,10 @@ footer>a:hover{
 	}
 	.head>span{
 	font-size: 35px;
+	}
+}
+@media screen and (max-width:400px) {
+	.longExplain{
+		font-size: 16px !important;
 	}
 }
