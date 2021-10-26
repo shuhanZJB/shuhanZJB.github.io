@@ -55,8 +55,12 @@ a{
 	font-size: 1.5em;
 	font-weight: bold;
 }
-ol{
+ol,ul{
 	list-style-position: inside;
+}
+li>ol{
+	padding-left: 25px;
+	list-style-type: none;
 }
 .head{
 	width: 100%;
@@ -68,20 +72,20 @@ ol{
 	font-family: cursive;
 	color: white;
 	font-size: 55px;
-	background-image: url(1.webp);
+	background-image: url(../img/1.webp);
 	background-size: cover;
 }
 .headbg1{
-	background-image: url(005.jpg);
+	background-image: url(../img/005.jpg);
 }
 .headbg2{
-	background-image: url(002.jpg);
+	background-image: url(../img/002.jpg);
 }
 .headbg3{
-	background-image: url(003.jpg);
+	background-image: url(../img/003.jpg);
 }
 .headbg4{
-	background-image: url(004.jpg);
+	background-image: url(../img/004.jpg);
 }
 .head>h6{
 	margin-top: 20px;
@@ -127,7 +131,7 @@ h3{
 }
 .btn{
 	margin: 10px;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	display: inline-block;
 	border:#4a4113 1px solid ;
 	border-radius: 20px;
@@ -192,23 +196,42 @@ h6.write{
 	color: slategray;
 }
 .law>h1{
+	/* display: none; */
 	visibility: hidden;
 	font-size: 50px;
 	color: slategray;
 }
 .law>h2{
-	border-left: #009688 5px solid;
+	border-left: gray 5px solid;
 	padding-left: 30px;
 	font-size: 25px;
 	color: teal;
 	background-color: #30706e1f;
 	margin: 30px 0 20px;
 }
+.zhh2{
+	border-left: #53070e 5px solid !important;
+	color: white !important;
+	background-color: #af312b !important;
+}
 .item{
 	font-weight: bold;
 	font-size: 16px;
 	color: steelblue;
 	/* font-family: '隶书'; */
+}
+.item-zh{
+	color: brown;
+}
+section.expand>h1{
+	color: darkred;
+	border-bottom:#892a1c 5px double;
+}
+div.expand{
+	color: #8b3142;
+	font-size: 15px;
+	font-family: fangsong;
+	font-weight: bold;
 }
 .ftimg{
 	position: sticky;
@@ -227,7 +250,10 @@ footer>a:hover{
 	color: #FFA500;
 }
 @media screen and (max-width:720px) {
-	.card,.law{
+	.law{
+		width: 80vw;
+	}
+	.card{
 		width: 80vw;
 	}
 	section{
