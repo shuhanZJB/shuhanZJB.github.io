@@ -104,7 +104,7 @@
 					var T = document.getElementsByClassName("time-t")[0];
 					var M = document.getElementsByClassName("time-m")[0];
 					var now = new Date();
-					var week = ['星期一','星期二','星期三','星期四','星期五','星期六','星期天']
+					var week = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六']
 					var str1 = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
 					var str2 = now.getFullYear()+"/"+(now.getMonth()+1)+"/"+now.getDate()+" "+week[now.getDay()];
 					T.innerHTML = str1;
