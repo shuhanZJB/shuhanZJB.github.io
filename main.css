@@ -16,6 +16,11 @@ html {
 	--r2: #cc5050;
 	--g1: #9bd952;
 	--g2: #8cc44b;
+	--selection: tomato;
+}
+
+::selection{
+	color: var(--selection);
 }
 
 body {
