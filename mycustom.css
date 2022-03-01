@@ -30,20 +30,19 @@ body{
 	line-height: 100px;
 	line-height: 1.5;
 	text-align: center;
-	color: #8bcfd5;
+	color: #f8c4d694;
 	font-size: 25px;
 	font-family: "隶书";
 }
 .snowfall-flakes::before{
 	content: '';
-	background: url(snow.png) center ;
+	background: url(flow.png) center  no-repeat ;
+	background-size: 100% 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	filter: blur(3px);
+	width: 17px;
+	height: 16px;
 }
 .red-boder{
 	border-color: brown;
