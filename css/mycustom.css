@@ -1,0 +1,84 @@
+::-webkit-scrollbar {
+	width: 10px;
+	/* background-color: #bb9f5d66; */
+}
+::-webkit-scrollbar-thumb{
+	width: 5px;
+	background-color: var(--scrollbar);
+	border-radius: 5px;
+	background-clip: padding-box;
+	border: 2.6px solid transparent;
+}
+body{
+	/* overflow: hidden; */
+}
+.barpic{
+	transform: translateY(-100px);
+}
+.lingshi{
+	margin-top: -180px;
+}
+.fontc{
+	font-family: cursive !important;
+}
+.newyear{
+	position: absolute;
+	bottom: 100px;
+	padding:0 20px;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	line-height: 1.5;
+	text-align: center;
+	/* color: #8bcfd5; */
+	color: #ff3411a9;
+	font-size: 25px;
+	font-family: "隶书";
+}
+/* 定义飘雪区 飘落物 
+
+/*花瓣*/
+.snowfall-flakes::before{
+	content: '';
+	background: url(../images/left.png) center  no-repeat ;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30px;
+	height: 32px;
+	animation:flow 10s infinite;
+	/* transform: rotate(250deg); */
+	/* filter: blur(1px); */
+}
+@keyframes flow{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+/*雪花*/
+/* .snowfall-flakes::before{
+	content: '';
+	background: url(../images/snow.png) center ;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	filter: blur(3px);
+} */
+.red-boder{
+	border-color: brown;
+}
+.text-pink{
+	color: palevioletred;
+}
+.event-name>a{
+	color: inherit;
+}
+.event-name>a:hover{
+	border-bottom:solid cadetblue 1px;
+}
+@media only screen and (max-width: 991px){
+	.lingshi{margin: 0;}
+}
