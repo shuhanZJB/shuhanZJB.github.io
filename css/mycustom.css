@@ -40,7 +40,7 @@ body{
 /*花瓣*/
 .snowfall-flakes::before{
 	content: '';
-	background: url(../images/left.png) center  no-repeat ;
+	background: url(../images/season/fl2.png) center  no-repeat ;
 	background-size: 100% 100%;
 	position: absolute;
 	left: 0;
