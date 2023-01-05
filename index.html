@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>星光不负赶路人</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="description" content="Zhu Junbo's personal blog" />
+		<meta name="keywords"
+			content="vcard, resposnive, retina, resume, jquery, css3, bootstrap,zhujunbo, blog" />
+		<meta name="author" content="zhujunbo" />
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/transition-animations.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/mycustom.css"/>
+		<script src="js/jquery-2.1.3.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/myfunction.js" type="text/javascript"></script>
+		<style type="text/css">
+			.fun-fact-block.gray-bg {
+			    background-color: floralwhite;
+			}
+			.fun-fact-block{
+				background: beige;
+			}
+			.testimonial-content .testimonial-text{
+				background-color: #c0cfae;
+				color: #545e48;
+			}
+			ul.social-links li a{
+				background-color: #8e9981;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 加载动画 -->
+		<div class="preloader">
+			<div class="preloader-animation">
+				<div class="dot1"></div>
+				<div class="dot2"></div>
+			</div>
+		</div>
+		<!-- 加载动画结束 -->
+		<div id="page" class="page">
+			<!-- 头部 -->
+			<header id="site_header" class="header">
+				<div class="my-photo">
+					<img src="images/chun2.jpg" alt="image">
+					<div class="mask" id="mypoto">
+						<div class="newyear" id="newyear">
+							<script type="text/javascript">
+								function SpringFestival(){
+									Countdown('农历新年','1/22/2023',newyear);
+								};
+								window.onload= setInterval(SpringFestival,1000);
+							</script>
+						</div>
+					</div>
+				</div>
+				<div class="site-title-block">
+					<h1 class="site-title fontc">路行未远</h1>
+					<p class="site-description fontc">朱小孩的小世界</p>
+				</div><a class="menu-toggle mobile-visible"><i class="fa fa-bars"></i></a>
+			</header>
+			<!-- 头部结束 -->
+			<!-- 主体内容 -->
+			<div id="main" class="site-main">
+				<!-- 分页区 -->
+				<div class="pt-wrapper" style="background-color: #dce3d4;">
+					<!-- 导航和其他社交主页 -->
+					<div class="site-nav mobile-menu-hide">
+						<!-- 导航 -->
+						<ul id="nav" class="site-main-menu">
+							<!-- 关于我 -->
+							<li>
+								<a class="pt-trigger" href="#about_me" data-animation="58" data-goto="1">关于我</a>
+							</li>
+							<!-- 其他内容 -->
+							<li><a class="pt-trigger" href="#resume" data-animation="59" data-goto="2">个人简历</a></li>
+							<li><a class="pt-trigger" href="#portfolio" data-animation="60" data-goto="3">作品集</a>
+							</li>
+							<li><a class="pt-trigger" href="#blog" data-animation="61" data-goto="4">博客文章</a></li>
+							<li><a class="pt-trigger" href="#contact" data-animation="58" data-goto="5">联系方式</a></li>
+							<!-- <li><a class="pt-trigger" href="#tzhang" data-animation="59" data-goto="6">拓展</a></li> -->
+						</ul>
+						<!-- 导航结束 -->
+						<!-- 其他社交主页 -->
+						<!-- 社交软件的完整图标列表:http://fontawesome.io/icons/#brand -->
+						<ul class="social-links">
+							<li>
+								<a class="tip social-button" href="#" title="Twitter">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a class="tip social-button" href="#" title="Facebook">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							<li>
+								<a class="tip social-button" href="#" title="Google Plus">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</li>
+							<li>
+								<a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a>
+							</li>
+							<li>
+								<a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a>
+							</li>
+							<li>
+								<a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+							</li>
+							<li>
+								<a class="tip social-button" target="_blank" href="https://travellings.link" title="travelling">
+									<i class="fa fa-bus"></i>
+								</a>
+							</li>
+						</ul>
+						<!-- 社交主页结束 -->
+					</div>
+					<!-- 导航页结束 -->
+					<!-- 子页面 -->
+					<div class="subpages">
+						<!-- 关于子页 -->
+						<section class="pt-page pt-page-1" data-id="about_me">
+							<div class="section-title-block">
+								<h2 class="section-title">路行未远</h2>
+								<h5 class="section-description">学生,宅男,爱幻想的小孩</h5>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 col-md-12 mobile-visible subpage-block">
+									<div class="my-photo-small"><img src="images/apollo/24.jpg" alt="image"></div>
+								</div>
+								<div class="col-sm-6 col-md-6 subpage-block">
+									<div class="general-info">
+										<h3>一个喜欢做梦的小孩，二十岁仍相信童话。</h3>
+										<p>这个世界上有很多事情是我们无能为力的。</p>
+										<p>比如生老病死和总会枯萎的花，比如戴了好几年的玉佩突然不见了，比如小王子不能跟狐狸在一起。
+										   比如曾经以为能够天长地久的某个人有一天抛下你离你远去，比如，你年过四十仍然没车没房没钱。</p>
+										<p>比如海的蓝色和天空的宁静，比如突然冒进脑海里想要远离的念头，比如在人群中遇到的知己，
+										   比如一向不愿意敞开心扉的你却愿意对某个人毫无保留，比如，挣扎着，努力着，仍走不出困境。</p>
+									</div>
+								</div>
+								<!-- 介绍项 -->
+								<!-- <div class="col-sm-4 col-md-4 subpage-block">
+									<div class="block end">
+										<ul class="info-list">
+											<li>
+												<span class="title">姓名</span>
+												<span class="value">朱同学</span>
+											</li>
+											<li>
+												<span class="title">年龄</span>
+												<span class="value">二十一岁</span>
+											</li>
+											<li>
+												<span class="title">地址</span>
+												<span class="value">武汉 | 江夏 | 藏龙岛</span>
+											</li>
+											<li>
+												<span class="title">邮件</span>
+												<span class="value"><a href="mailto:1664575649@qq.com">1664575649@qq.com</a></span>
+											</li>
+											<li>
+												<span class="title">手机</span>
+												<span class="value">15697135926</span>
+											</li>
+											<li>
+												<span class="title">职业</span>
+												<span class="value available">学生</span>
+											</li>
+										</ul>
+									</div>
+								</div> -->
+								<div class="col-sm-6 col-md-6 subpage-block">
+									<div class="block-title">
+										<h3>推荐书</h3>
+									</div>
+									<div class="testimonials owl-carousel">
+										<!-- 好友推荐 -->
+										<div class="testimonial-item">
+											<!-- 朋友的话 -->
+											<div class="testimonial-content">
+												<div class="testimonial-text">
+													<p>"每年至少要去一次远方，给心灵一次解放，去见见碎碎念的风景，打开心扉，大胆跟陌生人接触，
+													总会有意想不到的的收获，会发现生命中还是有许许多多值得期待的事."</p>
+												</div>
+											</div>
+											<!-- 话语结束 -->
+											<!-- 好友信息 -->
+											<div class="testimonial-credits">
+												<!-- 照片 -->
+												<div class="testimonial-picture">
+													<img src="images/apollo/23.jpg" alt="许辛池">
+												</div>
+												<!-- 好友署名 -->
+												<div class="testimonial-author-info">
+													<p class="testimonial-author">许辛池</p>
+													<p class="testimonial-firm">上海.</p>
+												</div>
+											</div>
+										</div>
+										<!-- 好友推荐2 -->
+										<div class="testimonial-item">
+											<!-- 朋友的话 -->
+											<div class="testimonial-content">
+												<div class="testimonial-text">
+													<p>"时针还在不停的转动，我们的生活还在继续着，或许杂乱无章，或许井然有序。
+													    在这匆忙的生活中，我一直都在前进着，思考着，这一切从来都不曾驻足。"</p>
+												</div>
+											</div>
+											<!-- 话语结束 -->
+											<!-- 好友信息 -->
+											<div class="testimonial-credits">
+												<!-- 照片 -->
+												<div class="testimonial-picture">
+													<img src="images/apollo/20.jpg" alt="朱谨言">
+												</div>
+												<!-- 好友署名 -->
+												<div class="testimonial-author-info">
+													<p class="testimonial-author">朱谨言</p>
+													<p class="testimonial-firm">武汉</p>
+												</div>
+											</div>
+										</div>
+										<!-- 推荐结束 -->
+										<!-- 好友推荐3 -->
+										<div class="testimonial-item">
+											<!-- 朋友的话 -->
+											<div class="testimonial-content">
+												<div class="testimonial-text">
+													<p>"我不去想，是否能够成功 ，既然选择了远方 ，便只顾风雨兼程。
+														我不去想，身后会不会袭来寒风冷雨 ，既然目标是地平线，留给世界的只能是背影 。
+														我不去想，未来是平坦还是泥泞 ，只要热爱生命 ，一切，都在意料之中。"</p>
+												</div>
+											</div>
+											<!-- 话语结束 -->
+											<!-- 好友信息 -->
+											<div class="testimonial-credits">
+												<!-- 照片 -->
+												<div class="testimonial-picture">
+													<img src="images/zx-2.jpg" alt="朱俊波">
+												</div>
+												<!-- 好友署名 -->
+												<div class="testimonial-author-info">
+													<p class="testimonial-author">朱俊波</p>
+													<p class="testimonial-firm">武汉</p>
+												</div>
+											</div>
+										</div>
+										<!-- 推荐结束 -->
+										<div class="testimonial-item">
+											<!-- 朋友的话 -->
+											<div class="testimonial-content">
+												<div class="testimonial-text">
+													<p>"明明很想哭，却还在笑；明明很在乎，却装作无所谓；明明很想留下，却坚定地说要离开；
+													    明明很痛苦，却偏偏说自己很幸福；明明忘不掉，却说已经忘了；
+														<!-- 明明放不下，却说她是她，我是我；明明舍不得，却说我已经受够了； -->
+														明明说的是违心的假话，却说那是自己的真心话；明明眼泪都快溢出眼眶，却高昂着头；"</p>
+												</div>
+											</div>
+											<!-- 话语结束 -->
+											<!-- 好友信息 -->
+											<div class="testimonial-credits">
+												<!-- 照片 -->
+												<div class="testimonial-picture">
+													<img src="images/zjb-2.jpg" alt="朱俊波">
+												</div>
+												<!-- 好友署名 -->
+												<div class="testimonial-author-info">
+													<p class="testimonial-author">朱雄</p>
+													<p class="testimonial-firm">黄冈</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 技能介绍 -->
+							<div class="block-title">
+								<h3>所学课程</h3>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 col-md-3 subpage-block">
+									<div class="service-block">
+										<div class="service-info">
+											<img src="images/service/web_design.png" alt="Responsive Design">
+											<h4>HTML+CSS+JavaScript</h4>
+											<p>我们大把的美好童年时光，几乎都被用来学习。
+											   最后，终于得到了一个能给自己些许保障的——被称为“文凭”的东西。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3 subpage-block">
+									<div class="service-block">
+										<div class="service-info">
+											<img src="images/service/copywrite.png" alt="Copywriter">
+											<h4>JQUERY</h4>
+											<p>在我们的职业生涯中，为了有好的表现，花费了太多太多的精力和努力，直到我们精疲力尽... 
+											   那一瞬间想变成天上半明半暗的云</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3 subpage-block">
+									<div class="service-block">
+										<div class="service-info"><img src="images/service/ecommerce.png"
+												alt="E-Commerce">
+											<h4>BOOTSTRAP</h4>
+											<p>但我们总是坚信，自己的价值能在这个社会，发出闪闪光芒。
+											   时光飞快，我们慢慢成长.....然后有了新的目标。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3 subpage-block">
+									<div class="service-block">
+										<div class="service-info"><img src="images/service/management.png"
+												alt="Management">
+											<h4>JAVA</h4>
+											<p>我们还在继续向上爬啊爬，总希望爬得越高越好。
+											   终于有一天，自己走到哪儿就成了哪儿的焦点----没错，我们有钱了。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 介绍结束 -->
+							<!-- 好友列表 -->
+							<div class="block-title">
+								<h3>舒航系列</h3>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 col-md-2 subpage-block">
+									<div class="client_block"><a href="https://shuhanzjb.github.io/shelf.html" >
+									<img src="images/clients/book.png" alt="image"></a></div>
+								</div>
+								<div class="col-sm-4 col-md-2 subpage-block">
+									<div class="client_block"><a href="#" target="_blank">
+									<img src="images/clients/tree.png" alt="image"></a></div>
+								</div>
+								<div class="col-sm-4 col-md-2 subpage-block">
+									<div class="client_block"><a href="#" target="_blank">
+									<img src="images/clients/blueleaf.png" alt="image"></a></div>
+								</div>
+								<div class="col-sm-4 col-md-2 subpage-block">
+									<div class="client_block"><a href="#" target="_blank">
+									<img src="images/clients/orbook2.png" alt="image"></a></div>
+								</div>
+								<div class="col-sm-4 col-md-2 subpage-block">
+									<div class="client_block"><a href="#" target="_blank">
+									<img src="images/clients/shan.png" alt="image"></a></div>
+								</div>
+								<div class="col-sm-4 col-md-2 subpage-block">
+									<div class="client_block"><a href="#" target="_blank">
+									<img src="images/clients/ma.png" alt="image"></a></div>
+								</div>
+							</div>
+							<!-- 列表结束 -->
+							<!-- 心灵状态 -->
+							<div class="block-title">
+								<h3>心情状态</h3>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 col-md-3 subpage-block">
+									<div class="fun-fact-block gray-bg"><i class="pe-7s-icon pe-7s-smile"></i>
+										<h4>开心</h4><span class="fun-value">1,024</span>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3 subpage-block">
+									<div class="fun-fact-block"><i class="pe-7s-icon pe-7s-alarm"></i>
+										<h4>平淡</h4><span class="fun-value">6,256</span>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3 subpage-block">
+									<div class="fun-fact-block gray-bg"><i class="pe-7s-icon pe-7s-medal"></i>
+										<h4>郁闷</h4><span class="fun-value">21</span>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3 subpage-block">
+									<div class="fun-fact-block"><i class="pe-7s-icon pe-7s-coffee"></i>
+										<h4>悠闲</h4><span class="fun-value">20,000</span>
+									</div>
+								</div>
+							</div>
+							<!-- 心情结束 -->
+						</section>
+						<!-- /关于页 -->
+						<!-- 简历子页 -->
+						<section class="pt-page pt-page-2" data-id="resume">
+							<div class="section-title-block">
+								<h2 class="section-title">个人简历</h2>
+								<h5 class="section-description">应届毕业生</h5>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 col-md-4 subpage-block">
+									<div class="block-title">
+										<h3>教育经历</h3>
+									</div>
+									<div class="timeline">
+										<!-- 教育经历 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2022</h5>
+											<h4 class="event-name">大学毕业</h4><span
+												class="event-description">武汉纺织大学外经贸学院</span>
+											<p>多少人走着，却困在原地；多少人活着却如同死去；多少人爱着却好似分离；多少人笑着却满含泪滴</p>
+										</div>
+										<!-- 教育经历 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2019</h5>
+											<h4 class="event-name">高中毕业</h4><span
+												class="event-description">团陂高级中学</span>
+											<p>我陪你步入蝉夏，越过窗外喧嚣;歌声还在游走 你榴花般的双眸。岁月无法停留，流云的等候</p>
+										</div>
+										<!-- 教育经历 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2016</h5>
+											<h4 class="event-name">初中毕业</h4><span
+												class="event-description">华桂初级中学</span>
+											<p>开始的开始，我们都是孩子；最后的最后，渴望变成天使。</p>
+										</div>
+										<!-- 教育经历 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2013</h5>
+											<h4 class="event-name">小学毕业</h4><span
+												class="event-description">十三小学</span>
+											<p>多少人走着，却困在原地；多少人活着却如同死去；多少人爱着却好似分离；多少人笑着却满含泪滴</p>
+										</div>
+										<!-- 教育经历 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2012</h5>
+											<h4 class="event-name">小学转学</h4><span
+												class="event-description">石江小学</span>
+											<p>多少人走着，却困在原地；多少人活着却如同死去；多少人爱着却好似分离；多少人笑着却满含泪滴</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-4 subpage-block">
+									<div class="block-title">
+										<h3>工作经历</h3>
+									</div>
+									<div class="timeline">
+										<!-- 具体工作 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2022-2023</h5>
+											<h4 class="event-name"><a href="">京东</a></h4><span
+												class="event-description">零售</span>
+											<p>第一份全职工作，目前看来还不错，朝九晚六，月休八天，工资四千，已转正，正常缴纳五险一金，
+											   每个月的最后工作日发放当月工资，是一份还算靠谱的工作，刚开始做纠纷，后面转商家申诉，
+											   虽然工作难压力大，也想过离职，但最后还是坚持了下来，但毕竟今时不同往日，疫情冲击下，
+											   整个大环境不算好，已毕业面临就业压力的我，也不确定下一份工作会更好...</p>
+										</div>
+										<!-- 具体工作 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2021-2022</h5>
+											<h4 class="event-name"><a href="">纳杰</a></h4><span
+												class="event-description">人力资源</span>
+											<p>实习工作，不算好工作，也不算差工作，是介于不好不差的工作，没有长期发展的打算，正常的结束实习</p>
+										</div>
+										<!-- 具体工作 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2020-2021</h5>
+											<h4 class="event-name">海底捞</h4><span
+												class="event-description">餐饮</span>
+											<p>在海底捞吃饭和在海底捞工作，还是很不一样的，因为生意好，所以工作很累，
+											   但好在但工资也很多，做了两个月收了九千多，这是我收的最多的一次，因为
+											   包吃包住，水电全免，所以到手的是纯利润。</p>
+										</div>
+										<!-- 具体工作 -->
+										<div class="timeline-event te-primary">
+											<h5 class="event-date">2019-2020</h5>
+											<h4 class="event-name">京东</h4><span
+												class="event-description">物流</span>
+											<p>第一桶金，很累，也很充实，凌晨五点的天空下是做不完的流水线和卸不完的货。
+											   在这里，有孩子和我一样大的人，午饭吃着
+											   馒头就咸菜然后躺在大纸盒里休息；</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-4 subpage-block">
+									<div class="block-title">
+										<h3>前端</h3>
+									</div>
+									<div class="skills-info">
+										<h4>HTML5</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-1"></div>
+										</div>
+										<h4>CSS3</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-2"></div>
+										</div>
+										<h4>ECMAScript6</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-3"></div>
+										</div>
+										<h4>Ajax</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-1"></div>
+										</div>
+									</div>
+									<div class="block-title">
+										<h3>编程语言和前端框架</h3>
+									</div>
+									<div class="skills-info">
+										<h4>JAVA</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-4"></div>
+										</div>
+										<h4>PYTHON</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-5"></div>
+										</div>
+										<h4>PHP</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-6"></div>
+										</div>
+										<h4>VUE</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-7"></div>
+										</div>
+										<h4>BOOTSTRAP</h4>
+										<div class="skill-container">
+											<div class="skill-percentage skill-8"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 col-md-12">
+									<div class="download-cv-block">
+										<a class="button" target="_blank" href="./media/个人简历.pdf">预览简历</a></div>
+								</div>
+							</div>
+						</section>
+						<!-- /简历页 -->
+						<!-- 项目子页 -->
+						<section class="pt-page pt-page-3" data-id="portfolio">
+							<div class="section-title-block">
+								<h2 class="section-title">我的项目</h2>
+								<h5 class="section-description">作品集锦</h5>
+							</div>
+							<!-- 集锦 -->
+							<div class="portfolio-content">
+								<!-- 项目过滤器 -->
+								<ul id="portfolio_filters" class="portfolio-filters">
+									<li class="active">
+										<a class="filter btn btn-sm btn-link active"data-group="all">全部</a>
+									</li>
+									<li>
+										<a class="filter btn btn-sm btn-link" data-group="shop">电商平台</a>
+									</li>
+									<li>
+										<a class="filter btn btn-sm btn-link" data-group="sites">其他网站</a>
+									</li>
+									<li>
+										<a class="filter btn btn-sm btn-link" data-group="video">媒体</a>
+									</li>
+									<li>
+										<a class="filter btn btn-sm btn-link" data-group="season">样式</a>
+									</li>
+								</ul>
+								<!-- 过滤结束 -->
+								<!-- 项目展示 -->
+								<div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+									<!-- 项目1 -->
+									<figure class="item" data-groups='["all", "shop"]'>
+										<a class="lightbox" href="images/hone-2.png" title="妖怪阁楼">
+											<img src="images/honeapp.png" alt="妖怪阁楼">
+											<div>
+												<h5 class="name">妖怪阁楼</h5>
+												<small>移动端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目2 -->
+									<figure class="item" data-groups='["all", "sites"]'>
+										<a href="images/360-2.png" class="lightbox" title="仿360浏览器官网">
+											<img src="images/360.png" alt="360">
+											<div>
+												<h5 class="name">仿360浏览器</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目3 -->
+									<figure class="item" data-groups='["all","shop"]'>
+										<a href="images/ht.png" class="lightbox" title="后台管理系统">
+											<img src="images/ht.png" alt="后台管理系统">
+											<div>
+												<h5 class="name">后台管理系统</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目4 -->
+									<figure class="item" data-groups='["all", "shop"]'>
+										<a class="lightbox" href="images/canteen.png" title="掌上餐厅">
+											<img src="images/vegetables.png" alt="掌上餐厅">
+											<div>
+												<h5 class="name">掌上餐厅</h5>
+												<small>移动端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!--项目5 -->
+									<figure class="item" data-groups='["all", "sites"]'>
+										<a href="images/shool-2.png" class="lightbox" title="仿河北职业学校">
+											<img src="images/school.png" alt="学校">
+											<div>
+												<h5 class="name">仿河北职业学校</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目6 -->
+									<figure class="item" data-groups='["all", "sites"]'>
+										<a class="lightbox" href="images/green.png" title="散文诗">
+											<img src="images/green.png" alt="poem">
+											<div>
+												<h5 class="name">散文诗</h5>
+												<small>响应式</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目7 -->
+									<figure class="item" data-groups='["all", "video"]'>
+										<a href="media/002.mp4" class="lightbox mfp-iframe" title="夏日假期">
+											<img src="images/summer.jpg" alt="">
+											<div>
+												<h5 class="name">夏日假期</h5>
+												<small>视频</small>
+												<i class="fa fa-video-camera"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目8 -->
+									<figure class="item" data-groups='["all",  "sites"]'>
+										<a class="lightbox" href="images/class.png" title="班级管理页">
+											<img src="images/class.png" alt="">
+											<div>
+												<h5 class="name">班级管理</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目9 -->
+									<figure class="item" data-groups='["all","sites"]'>
+										<a href="images/learn.png" class="lightbox" title="以创导航">
+											<img src="images/note.png" alt="">
+											<div>
+												<h5 class="name">以创导航</h5>
+												<small>响应式</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目10 -->
+									<figure class="item" data-groups='["all", "video"]'>
+										<a href="media/snow.mp4" class="lightbox mfp-iframe" title="大约在冬季">
+											<img src="images/snow.jpg" alt="">
+											<div>
+												<h5 class="name">大约在冬季</h5>
+												<small>视频</small>
+												<i class="fa fa-video-camera"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目11 -->
+									<figure class="item" data-groups='["all","sites"]'>
+										<a href="images/mi.png" class="lightbox"  title="仿小米商城">
+											<img src="images/mi.png" alt="">
+											<div>
+												<h5 class="name">仿小米商城</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 项目12 -->
+									<figure class="item" data-groups='["all","video"]'>
+										<a class="lightbox mfp-iframe" href="media/001.mp4" title="雨一直下">
+											<img src="images/fiction.jpg" alt="">
+											<div>
+												<h5 class="name">雨一直下</h5>
+												<small>视频</small>
+												<i class="fa fa-video-camera"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 四季样式 --><!-- 春 -->
+									<figure class="item" data-groups='["all", "season"]'>
+										<a href="images/season/spring.png" class="lightbox" title="春天">
+											<img src="images/season/spring.png" alt="春">
+											<div>
+												<h5 class="name">春季样式</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 夏 -->
+									<figure class="item" data-groups='["all", "season"]'>
+										<a href="images/season/summer.png" class="lightbox" title="夏天">
+											<img src="images/season/summer.png" alt="夏">
+											<div>
+												<h5 class="name">夏季样式</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 秋 -->
+									<figure class="item" data-groups='["all", "season"]'>
+										<a href="images/season/autumn.png" class="lightbox" title="秋天">
+											<img src="images/season/autumn.png" alt="秋">
+											<div>
+												<h5 class="name">秋季样式</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+									<!-- 冬 -->
+									<figure class="item" data-groups='["all", "season"]'>
+										<a href="images/season/winter.png" class="lightbox" title="冬天">
+											<img src="images/season/winter.png" alt="冬">
+											<div>
+												<h5 class="name">冬季样式</h5>
+												<small>PC端</small>
+												<i class="fa fa-image"></i>
+											</div>
+										</a>
+									</figure>
+								</div>
+								<!-- /展示结束 -->
+							</div>
+							<!-- /集锦结束 -->
+						</section>
+						<!-- /项目页 -->
+						<!-- 博客子页 -->
+						<section class="pt-page pt-page-4" data-id="blog">
+							<div class="section-title-block">
+								<h2 class="section-title">博客</h2>
+								<h5 class="section-description">文章</h5>
+							</div>
+							<div class="blog-masonry">
+								<!-- 文章 -->
+								<div class="item">
+									<div class="blog-card">
+										<div class="media-block">
+											<a href="blog-post-1.html">
+												<img class="post-image img-responsive" src="images/山谷.jpg"
+													alt="blog-post-1" />
+												<div class="mask"></div>
+												<div class="post-date">
+													<span class="day">12</span>
+													<span class="month">Dec</span>
+													<span class="year">2021</span>
+												</div>
+											</a>
+										</div>
+										<div class="post-info">
+											<ul class="category">
+												<li><a href="#">实习</a></li>
+											</ul>
+											<a href="#">
+												<h4 class="blog-item-title">山谷吹来的风</h4>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- 文章 -->
+								<div class="item">
+									<div class="blog-card">
+										<div class="media-block">
+											<a href="blog-post-2.html">
+												<img class="post-image img-responsive" src="images/路灯.jpg"
+													alt="blog-post-2" />
+												<div class="mask"></div>
+												<div class="post-date">
+													<span class="day">25</span>
+													<span class="month">Nov</span>
+													<span class="year">2021</span>
+												</div>
+											</a>
+										</div>
+										<div class="post-info">
+											<ul class="category">
+												<li><a href="">相思</a></li>
+											</ul>
+											<a href="#">
+												<h4 class="blog-item-title">只有路灯和我的狗</h4>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- 文章 -->
+								<div class="item">
+									<div class="blog-card">
+										<div class="media-block">
+											<a href="#">
+												<img class="post-image img-responsive" src="images/女孩.jpg"
+													alt="blog-post-3" />
+												<div class="mask"></div>
+												<div class="post-date">
+													<span class="day">12</span>
+													<span class="month">Oct</span>
+													<span class="year">2021</span>
+												</div>
+											</a>
+										</div>
+										<div class="post-info">
+											<ul class="category">
+												<li><a href="#">初·心</a></li>
+											</ul>
+											<a href="#">
+												<h4 class="blog-item-title">十年前的那个小孩</h4>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- 文章 -->
+								<div class="item">
+									<div class="blog-card">
+										<div class="media-block">
+											<a href="#">
+												<img class="post-image img-responsive" src="images/天空.jpg"
+													alt="blog-post-4" />
+												<div class="mask"></div>
+												<div class="post-date">
+													<span class="day">18</span>
+													<span class="month">Aug</span>
+													<span class="year">2023</span>
+												</div>
+											</a>
+										</div>
+										<div class="post-info">
+											<ul class="category">
+												<li><a href="#">毕业</a></li>
+											</ul>
+											<a href="#">
+												<h4 class="blog-item-title">牛奶和面包都在远方</h4>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- /博客页 -->
+						<!-- 联系子页 -->
+						<section class="pt-page pt-page-5" data-id="contact">
+							<div class="section-title-block">
+								<h2 class="section-title">联系作者</h2>
+								<h5 class="section-description">取得联系</h5>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 col-md-6 subpage-block">
+									<div class="block-title">
+										<h3>联系方式</h3>
+									</div>
+									<p>你可以通过QQ、微信、推特、油管或微博联系我，也可以通过发电子邮件联系我;
+									   当然你也可以在本页留下你的信息；</p>
+									<div class="contact-info-block">
+										<div class="ci-icon"><i class="pe-7s-icon pe-7s-map-marker"></i></div>
+										<div class="ci-text">
+											<h5>武汉江夏</h5>
+										</div>
+									</div>
+									<div class="contact-info-block">
+										<div class="ci-icon"><i class="pe-7s-icon pe-7s-mail"></i></div>
+										<div class="ci-text">
+											<h5>1664578649@qq.com</h5>
+										</div>
+									</div>
+									<div class="contact-info-block">
+										<div class="ci-icon"><i class="pe-7s-icon pe-7s-call"></i></div>
+										<div class="ci-text">
+											<h5>15697135926</h5>
+										</div>
+									</div>
+									<div class="contact-info-block">
+										<div class="ci-icon"><i class="pe-7s-icon pe-7s-check"></i></div>
+										<div class="ci-text">
+											<h5>自由职业者</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-6 subpage-block">
+									<div class="block-title">
+										<h3>留下信息</h3>
+									</div>
+									<form id="contact-form" method="post" action="" autocomplete="off">
+										<div class="messages"></div>
+										<div class="controls">
+											<div class="form-group"><input id="form_name" type="text" name="name"
+													class="form-control" placeholder="你的名字" required="required"
+													data-error="请留下你的名字.">
+												<div class="form-control-border"></div><i
+													class="form-control-icon fa fa-user"></i>
+												<div class="help-block with-errors"></div>
+											</div>
+											<div class="form-group"><input id="form_email" type="email" name="email"
+													class="form-control" placeholder="邮箱地址" required="required"
+													data-error="需要有效的邮箱地址！">
+												<div class="form-control-border"></div><i
+													class="form-control-icon fa fa-envelope"></i>
+												<div class="help-block with-errors"></div>
+											</div>
+											<div class="form-group"><textarea id="form_message" name="message"
+													class="form-control" placeholder="消息.." rows="4"
+													required="required"
+													data-error="写点什么吧！"></textarea>
+												<div class="form-control-border"></div><i
+													class="form-control-icon fa fa-comment"></i>
+												<div class="help-block with-errors"></div>
+											</div>
+											<div class="g-recaptcha"
+												data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"
+												data-callback="correctCaptcha"></div><input type="submit"
+												class="button btn-send" value="留言">
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+						<!-- /联系子页 -->
+						<section class="pt-page pt-page-6" data-id="tzhang">
+							
+						</section>
+					</div>
+					<!-- /子页结束 -->
+				</div>
+				<!-- /分页区 -->
+			</div>
+			<!-- /主体内容 -->
+		</div>
+		
+		<script src="js/snowfall.js"></script>
+		<script>
+		    $(mypoto).snowfall({ flakeCount: 4, maxSpeed: 2 });//照片区飘雪
+		</script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/page-transition.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/validator.js"></script>
+		<script src="js/jquery.shuffle.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/jquery.hoverdir.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
