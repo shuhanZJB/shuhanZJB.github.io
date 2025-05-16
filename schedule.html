@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作息表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="shortcut icon" href="https://i0.hdslb.com/bfs/static/jinkela/long/images/favicon.ico">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			/* 主样式 */
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				font-size: 40px;
+				height: 100vh;
+				background-color: #002D41;
+				color: #eee;
+				font-size: 2rem;
+				text-align: center;
+				cursor: url(https://files.cnblogs.com/files/BySee1423/cursor.ico), auto;
+				user-select: none;
+			}
+
+			/* 内容显示 */
+			#timetable {
+				font-size: 56px;
+			}
+
+			/* 时间显示 */
+			#timeDisplay {
+				font-size: 36px;
+				margin-top: 20px;
+			}
+
+			/* 文本提示 */
+			#prompt {
+				font-size: 56px;
+				color: burlywood;
+				font-weight: bolder;
+			}
+
+			/* 图标样式 */
+			.qust {
+				cursor: pointer;
+			}
+
+			.creativity {
+				font-size: 25px;
+				/* color: chocolate; */
+				font-weight: bolder;
+				margin-top: 20px;
+				border-bottom: 2px solid #607D8B;
+				padding-bottom: 3px;
+			}
+
+			.slide-container {
+				width: min(80vw, 600px);
+				height: 60px;
+				margin: 10px auto;
+				position: relative;
+				overflow: hidden;
+				border-radius: 8px;
+				box-shadow: 0 4px 16px rgb(7 17 22 / 58%);
+			}
+
+			.slide {
+				position: absolute;
+				inset: 0;
+				display: grid;
+				place-items: center;
+				padding: 0 20px;
+				background: #196150;
+				color: white;
+				font-size: clamp(0.7rem, 2vw, 0.89rem);
+				opacity: 0;
+				transition: opacity 0.8s ease-in-out;
+			}
+
+			.slide.active {
+				opacity: 1;
+			}
+
+			/* 草稿纸样式 */
+			#test {
+				font-size: 20px;
+				color: chocolate;
+				font-family: '楷体';
+				margin: 20px 60px;
+			}
+
+			#NCEE {
+				color: chocolate;
+			}
+
+			#inhome,
+			#days,
+			#percent {
+				font-size: 36px;
+				color: crimson;
+				font-weight: bolder;
+			}
+
+			/* 移动端样式 */
+			@media (orientation: portrait) {
+				body {
+					font-size: 1.45rem;
+					height: 100vh;
+					overflow: hidden;
+				}
+
+				.qust {
+					font-size: 3rem;
+					margin-top: -15Vh;
+				}
+
+				.creativity {
+					font-size: 4vw;
+				}
+				
+				.slide-container{
+					margin-top: 30px;
+				}
+				
+				#timetable {
+					font-size: 16vw;
+					margin: 6vw;
+				}
+
+				#timeDisplay {
+					font-size: 6vw;
+					margin-top: 6Vh;
+					margin-bottom: 6Vh;
+				}
+
+				#prompt {
+					font-size: 6vw;
+					color: burlywood;
+					font-weight: bolder;
+				}
+
+				#inhome,
+				#days,
+				#percent {
+					font-size: 6vw;
+				}
+
+				#test {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 测试音频 -->
+		<div class="qust">👀</div>
+		<!-- 内容显示 -->
+		<div id="timetable"></div>
+		<!-- 时间显示 -->
+		<div id="timeDisplay"></div>
+		<!-- 结束提示文本 -->
+		<div>
+			<p>
+				离结束还有<span id="prompt"></span> 分钟 ⏳
+			</p>
+			<p class="creativity">
+				今天📆 <span id="week"></span> ，
+				<span id="NCEE"></span>
+			</p>
+			<p class="creativity">
+				已经休息 <span id="inhome"></span> 天了，
+				今天是今年的第<span id="days"></span>天，
+				今年已经过去了<span id="percent"></span>，要珍惜时间哦😉！
+			</p>
+		</div>
+		<!-- 数据校验 -->
+		<div id="test"></div>
+		<!-- 音频 -->
+		<audio id="voice" src="cxk.mp3"></audio>
+		<audio id="classStartBell" src="classStartBell.mp3"></audio>
+		<audio id="classEndBell" src="classEndBell.mp3"></audio>
+		<div class="slide-container">
+			<div class="slide active">~时针还在不停的转动，我们的生活还在继续着，或许杂乱无章，或许井然有序~</div>
+			<div class="slide">~在这匆忙的生活中，我们一直都在前进着，思考着，这一切从来都不曾驻足~</div>
+		</div>
+		<script type="text/javascript">
+			//你干嘛
+			let audio = document.getElementById('voice');
+			let qust = document.querySelector('.qust');
+			qust.onclick = function music() {
+				audio.play();
+			}
+			// 上课铃
+			function HK() {
+				let haveClass = document.getElementById('classStartBell');
+				haveClass.play();
+			}
+			// 下课铃
+			function KO() {
+				let overClass = document.getElementById('classEndBell');
+				overClass.play();
+			}
+			// 创建时间更新函数
+			function update() {
+				// 去除重复的时间范围，保证唯一性
+				const schedule = {
+					'06:00 - 06:40': '起床啦！现在是洗漱时间',
+					// '06:20 - 07:00': '护肤时间',
+					'06:00 - 07:40': '早自习时间<br/>~可以准备早餐了~',
+					'07:50 - 08:30': '早餐时间',
+					'08:40 - 09:20': '现在是上午第一节课',
+					'09:30 - 10:10': '现在是上午第二节课',
+					'10:30 - 11:10': '现在是上午第三节课',
+					'11:20 - 12:00': '现在是上午第四节课<br/>~可以准备午餐了~',
+					'12:10 - 12:40': '午餐时间',
+					'12:50 - 13:50': '午休时间',
+					'14:00 - 14:40': '现在是下午第一节课',
+					'14:50 - 15:30': '现在是下午第二节课',
+					'15:40 - 16:20': '现在是下午第三节课',
+					'16:30 - 17:10': '现在是下午第四节课',
+					'17:20 - 18:00': '现在是下午第五节课<br/>~可以准备晚餐了~',
+					'18:10 - 18:50': '晚餐时间',
+					'19:00 - 19:50': '第一节晚自习',
+					'20:00 - 20:50': '第二节晚自习',
+					'21:00 - 21:50': '第三节晚自习',
+					'22:00 - 22:50': '王者时间',
+					'23:00 - 23:10': '熄灯睡觉'
+				};
+				const week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+				// 现在时间对象
+				let now = new Date();
+				// 现在小时
+				let currentHour = now.getHours();
+				// 现在分钟
+				let currentMin = now.getMinutes();
+				// 现在总分钟
+				let currentTotalMinutes = currentHour * 60 + currentMin;
+				// 输出现在时间
+				document.getElementById("timeDisplay").innerHTML = '⏲  ' + now;;
+				let today = week[now.getDay()];
+				document.getElementById("week").innerHTML = today;
+				// 声明一个时间范围变量在时间表中，对比时间表返回当前内容
+				for (let timeRange in schedule) {
+					// 解构出开始时间和结束时间变量
+					let [startTime, endTime] = timeRange.split(' - ');
+					// 进一步解构出开始小时、开始分钟变量，并转化为数字类型
+					let [startHour, startMin] = startTime.split(':').map(Number);
+					// 进一步解构出结束小时、结束分钟变量，并转化为数字类型
+					let [endHour, endMin] = endTime.split(':').map(Number);
+					// 声明开始总分钟
+					let startTotalMinutes = startHour * 60 + startMin;
+					// 声明结束总分钟
+					let endTotalMinutes = endHour * 60 + endMin;
+
+					// 将时间都转换为分钟数进行比较
+					// 条件：当前总分钟大于等于开始总分钟且当前总分钟小于结束总分钟。（在时间表timeRange内，开始-结束）
+					if (currentTotalMinutes >= startTotalMinutes && currentTotalMinutes < endTotalMinutes) {
+						// 输出当前时间该做的事情
+						document.getElementById("timetable").innerHTML = schedule[timeRange];
+						// 计算下课的时间，用结束总分钟-现在总分钟
+						let diff = endTotalMinutes - currentTotalMinutes;
+						// 输出时间差
+						document.getElementById("prompt").innerHTML = diff;
+						// 数据验证
+						/*
+						document.getElementById("test").innerHTML = `现在时间是${currentHour}:${currentMin},现在分钟数是
+						${currentTotalMinutes},在${timeRange}区间内,<br/>开始是${startTime},结束是${endTime},开始总分钟数
+						${startTotalMinutes},结束总分钟数${endTotalMinutes},当前状态应该为上课状态，距离下课还有${diff}分钟`;
+						*/
+						// 执行上课铃，当现在总分钟与开始总分钟相同
+						if (currentTotalMinutes === startTotalMinutes && currentHour < 23) {
+							HK();
+						}
+						break; //跳出循环，不知道为什么没起效果
+						// 条件：当前总分钟大于等于结束时间，（不在时间表timeRange内，结束-开始）
+					} else if (currentTotalMinutes >= endTotalMinutes) {
+						// 收集所有时间段的开始时间，并排序
+						const allStarts = Object.keys(schedule).map(tr => {
+							const [st] = tr.split(' - ');
+							const [h, m] = st.split(':').map(Number);
+							return h * 60 + m;
+						}).sort((a, b) => a - b);
+
+						// 过滤出晚于当前时间的开始时间
+						const futureStarts = allStarts.filter(ms => ms > currentTotalMinutes);
+
+						// 计算下一个开始时间（优先取当天最近的，否则取次日第一个）
+						const nextStartTotalMinutes = futureStarts.length ?
+							futureStarts[0] :
+							allStarts[0] + 24 * 60; // 跨天处理
+
+						document.getElementById("timetable").innerHTML = '下课时间';
+						const diff = nextStartTotalMinutes - currentTotalMinutes;
+						document.getElementById("prompt").innerHTML = diff;
+						// 数据验证
+						/*
+						document.getElementById("test").innerHTML = `现在时间是${currentHour}:${currentMin},现在分钟数是
+						${currentTotalMinutes},在${timeRange}区间内,<br/>开始是${startTime},结束是${endTime},开始总分钟数
+						${startTotalMinutes},结束总分钟数${endTotalMinutes},当前状态应该为下课状态，距离上课还有${diff}分钟`;
+						*/
+						// 下课铃触发
+						if (currentTotalMinutes === endTotalMinutes && currentHour < 23) {
+							KO();
+						}
+					}
+				}
+				// 高考倒计时
+				let examYear = now.getFullYear();
+				let examText = "距离今年高考还有：";
+				let examDate = new Date(`${examYear}-06-07T09:00:00`);
+				// let MexamDate = new Date(`${examYear}-06-20T09:00:00`);//中考
+				let resign = new Date(`${examYear}-03-21T18:00:00`);
+				let resignday = Math.floor((now - resign) / (1000 * 60 * 60 * 24));
+				// 若当前时间超过6月，则计算下一年高考
+				if (now.getMonth() >= 5) {
+					examYear = now.getFullYear() + 1;
+					examText = "距离明年高考还有：";
+					examDate = new Date(`${examYear}-06-07T09:00:00`);
+				}
+
+				// 计算时间差（毫秒）
+				const diff = examDate - now;
+				// 获取当年的1月1日的日期
+				let firstDay = new Date(now.getFullYear(), 0, 1);
+
+				// 计算今天是当年的第几天
+				let dayOfYear = Math.ceil((now - firstDay) / (1000 * 60 * 60 * 24));
+
+				// 计算今天的进度
+				var progress = Math.ceil(dayOfYear / 365 * 100);
+				// 转换为天、时、分、秒
+				const examdays = Math.floor(diff / (1000 * 60 * 60 * 24));
+				const examhours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				const examminutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+				const examseconds = Math.floor((diff % (1000 * 60)) / 1000);
+				// 显示结果
+				document.getElementById("NCEE").textContent =
+					`${examText}${examdays}天 ${examhours}时 ${examminutes}分 ${examseconds}秒`;
+				document.getElementById("inhome").textContent = resignday;
+				document.getElementById("days").textContent = dayOfYear;
+				document.getElementById("percent").textContent = progress + "%";
+			}
+			setInterval(update, 1000);
+			document.addEventListener('DOMContentLoaded', () => {
+				const slides = document.querySelectorAll('.slide');
+				let current = 0;
+
+				setInterval(() => {
+					slides[current].classList.remove('active');
+					current = (current + 1) % slides.length;
+					slides[current].classList.add('active');
+				}, 8000);
+			});
+		</script>
+	</body>
+</html>
